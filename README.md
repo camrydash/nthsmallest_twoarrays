@@ -1,6 +1,6 @@
 ##Find the nth smallest element from two arrays
 
-Let `A[1..n]` and `B[1..n]` be two arrays of distinct integers, each sorted in an increasing order. Find the `nth` smallest of the `2n` combined elements. Your program must run in `O(log n)` time.
+>Let `A[1..n]` and `B[1..n]` be two arrays of distinct integers, each sorted in an increasing order. Find the n<sup>th</sup> smallest of the `2n` combined elements. Your program must run in `O(log n)` time.
 
 ###Solution
 
@@ -15,7 +15,7 @@ If we compare `A[i]  with `B[j] , we know that `A[i]< B[j]`, but if we compare `
 
 Since both arrays are sorted, we know from indexes, that `B[j]` is greater than `(i) +(j - 1)` elements, and is the `(i) +(j - 1) + 1` smallest. `B[j]`, therefore, is the `(2) + (2-1) + 1 = 4th` smallest and the answer.
 
-If we want to know the nth smallest element, we will have to search for an index `i` in `A` and find an index `j` in `B` so that `i + j = n` (we want to know the nth smallest defined by our equation).
+If we want to know the nth smallest element, we will have to search for an index `i` in `A` and find an index `j` in `B` so that `i + j = n` (we want to know the n<sup>th</sup> smallest defined by our equation).
 
 However, it could be possible that `A[i]` and `A[i + 1]` is smaller than `B[j]`. Consider the following example.
 
@@ -24,12 +24,12 @@ A = {2,5,8,13},  A[i]= 5, A[i+1] = 8
 B = {1,9,10,15}, B[j] = 9
 ```
 
-Start with middle element, `i = 2`. Since `j = n – i`, `j = 2`, then both `A[i]` and `A[i+1] are smaller than `B[j]`. In this  case, `B[j] is higher than the `nth` smallest element. Therefore, we have to recursively check the upper half. Conversely, if `B[j] and `B[j+1] are smaller than `A[i]`, then we recursively check the lower half.
+Start with middle element, `i = 2`. Since `j = n – i`, `j = 2`, then both `A[i]` and `A[i+1]` are smaller than `B[j]`. In this  case, `B[j]` is higher than the n<sup>th</sup> smallest element. Therefore, we have to recursively check the upper half. Conversely, if `B[j]` and `B[j+1]` are smaller than `A[i]`, then we recursively check the lower half.
 
 A few special cases have to be handled.
 
-* Case 1: If `A[n] < B[1]`, we know that `A[n]` is the `nth` number.
-* Case 2: If `B[n] < A[1]`, we know that `B[n]` is the `nth` number.
-* Case 3: `i + j = n`
+1. If `A[n] < B[1]`, we know that `A[n]` is the n<sup>th</sup> number
+2. If `B[n] < A[1]`, we know that `B[n]` is the n<sup>th</sup> number
+3. `i + j = n`
 
 If neither case 1 nor case 2 holds true, then we have to find the index of `i` and index of `j` recursively so that our equation `i + j = n` holds true (Case 3).
