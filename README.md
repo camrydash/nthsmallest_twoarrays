@@ -1,6 +1,6 @@
 ##Find the nth smallest element from two arrays
 
-Let `A[1..n]` and `B[1..n]` be two arrays of distinct integers, each sorted in an increasing order. Find the `nth` smallest of the `2n` combined elements. Your program must run in `O(log n)`` time.
+Let `A[1..n]` and `B[1..n]` be two arrays of distinct integers, each sorted in an increasing order. Find the `nth` smallest of the `2n` combined elements. Your program must run in `O(log n)` time.
 
 ###Solution
 
