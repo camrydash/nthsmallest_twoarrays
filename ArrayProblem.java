@@ -1,7 +1,4 @@
 // =======================================================================
-// Author: Danyal Isran
-// Email: danyal.isran@gmail.com
-// Title: Find the nth element of two sorted lists each of length n
 //
 // 							Instructions: 
 // ----------------------------------------------------------------------
